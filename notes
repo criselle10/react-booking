@@ -1,3 +1,5 @@
+react native is not the same with react.js, react native is use for moble development.(focus on movile dec)
+
 What is ReactJS?
 --ReactJS is javascript library used to create user interfaces.
 
@@ -21,4 +23,9 @@ How many kinds of components are in ReactJS? -2
 Components are mostly function which return React elements. It can also  receive data like a parameter 
 but not exactly parameter: We can receive PROPS.
 
-react native is not the same with react.js, react native is use for moble development.(focus on movile dec)
+Undefined VS Not Defined?
+    --Undefined simply means, that the variable has been declared 
+    but no value was initialized.
+
+    --Not Defined means that the variable you are referring simply
+    does not exist.

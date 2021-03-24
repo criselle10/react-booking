@@ -4,17 +4,23 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 
-export default function Banner(){
+export default function Banner({dataProp}){
+
+	// console.log(dataProp)
+
+	// Destructured dataProp (from Home)
+	const {title, description,label} = dataProp
+
 	return(
 		<Row>
 			<Col>
 				<Jumbotron>
-				  <h1>Zuitt Coding Bootcamp</h1>
+				  <h1>{title}</h1>
 				  <p>
-				   Opportunities for everyone, everywhere
+				  	{description}
 				  </p>
 				  <p>
-				    <Button variant="primary">Learn more</Button>
+				    <Button variant="primary">{label}</Button>
 				  </p>
 				</Jumbotron>
 			</Col>
