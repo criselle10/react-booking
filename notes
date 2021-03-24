@@ -1,0 +1,24 @@
+What is ReactJS?
+--ReactJS is javascript library used to create user interfaces.
+
+What is the syntac mostly used to create element in ReactJS?
+--JSX is used mostly in ReactJS but we can also create react element without the use of JSX.
+
+What is JSX?
+--javascript + XML (combination of JS and HTML/XML)
+
+JSX and its Babel compiler, transpiles/translates your XML/HTML syntax to JS objects.
+
+What is a react component?
+--It is a piece of frontend development codes that are:
+    -Reusable
+    -Independent
+
+How many kinds of components are in ReactJS? -2
+    -Functional
+    -class-based
+
+Components are mostly function which return React elements. It can also  receive data like a parameter 
+but not exactly parameter: We can receive PROPS.
+
+react native is not the same with react.js, react native is use for moble development.(focus on movile dec)
