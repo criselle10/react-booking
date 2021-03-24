@@ -3,7 +3,7 @@ export default [
         id: "wdc001",
         name: "PHP-Laravel",
         description: "lorem ipsum samina mina e e",
-        price: 45000,
+        price: 40000,
         onOffer: true
     },
     {

@@ -29,3 +29,9 @@ Undefined VS Not Defined?
 
     --Not Defined means that the variable you are referring simply
     does not exist.
+
+=======================================
+mounting > displaying elements
+rendering > reading code and logic/applying code
+unmounting > dealing with one page
+

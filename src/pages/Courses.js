@@ -12,10 +12,10 @@ export default function Courses(){
 	*/ 
 
 	// console.log(coursesData)
-	const course1 = coursesData[0]
-	const course2 = coursesData[1]
-	const course3 = coursesData[2]
-	console.log(course3)
+	// const course1 = coursesData[0]
+	// const course2 = coursesData[1]
+	// const course3 = coursesData[2]
+	// console.log(course3)
 
 	const data = {
 		title: "Welcome to the Courses Page",
@@ -23,14 +23,22 @@ export default function Courses(){
 		label: "Back To Home"
 	}
 
+
 	/*Props make components more reusable.*/ 
 
+	const courses = coursesData.map(course => {
+		return (
+			<Course key={course.id} courseProp={course}/>
+		)
+	})
+
 	return(
-			<>
+			<React.Fragment>
 				<Banner dataProp={data}/>
-				<Course courseProp={course1}/>
+				{courses}
+				{/* <Course courseProp={course1}/>
 				<Course courseProp={course2}/>
-				<Course courseProp={course3}/>
-			</>
+				<Course courseProp={course3}/> */}
+			</React.Fragment>
 		)
 }
