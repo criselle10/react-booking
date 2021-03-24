@@ -12,11 +12,15 @@ export default function Course({courseProp}){
 	// count-getters and setCount-setters
 	const [count, setCount] = useState(0);
 	const [seat, setSeat] = useState(10);
+	const [isOpen, setOpen] = useState(1);
 
 	function enroll(){
 		setCount(count + 1);
 		setSeat(seat -1);
 		console.log('Enrollees: ' + count);
+		if(seat == 1) {
+			setOpen(false);
+		}
 	}
 
 	return (
@@ -32,8 +36,7 @@ export default function Course({courseProp}){
 					<Card.Text>PHP{price}</Card.Text>
 					<Card.Text>Enrollees: {count}</Card.Text>
 					<Card.Text>Seats: {seat}</Card.Text>
-					{seat === 0 ? <Button variant="danger" disabled onClick={enroll} >Not Available</Button> : <Button variant="primary" onClick={enroll} >Enroll</Button> }
-					
+					{isOpen === false ? <Button variant="danger" disabled onClick={enroll} >Not Available</Button> : <Button variant="primary" onClick={enroll} >Enroll</Button> }
 				  </Card.Body>
 			    </Card>
 			  </Col>
