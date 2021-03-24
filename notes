@@ -22,5 +22,3 @@ Components are mostly function which return React elements. It can also  receive
 but not exactly parameter: We can receive PROPS.
 
 react native is not the same with react.js, react native is use for moble development.(focus on movile dec)
-
-includes S29 activity
