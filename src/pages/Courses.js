@@ -1,5 +1,4 @@
 import React from 'react';
-import Highlights from '../components/Highlights';
 import Banner from '../components/Banner';
 import Course from '../components/Course';
 import coursesData from '../data/courses';
@@ -23,22 +22,18 @@ export default function Courses(){
 		label: "Back To Home"
 	}
 
-
 	/*Props make components more reusable.*/ 
 
 	const courses = coursesData.map(course => {
 		return (
-			<Course key={course.id} courseProp={course}/>
+			<Course key={course.id} courseProp={course} exampleProp={"Criselle"}/>
 		)
 	})
-
+	console.log(courses)
 	return(
-			<React.Fragment>
-				<Banner dataProp={data}/>
-				{courses}
-				{/* <Course courseProp={course1}/>
-				<Course courseProp={course2}/>
-				<Course courseProp={course3}/> */}
-			</React.Fragment>
-		)
+		<React.Fragment>
+			<Banner dataProp={data}/>
+			{courses}
+		</React.Fragment>
+	)
 }

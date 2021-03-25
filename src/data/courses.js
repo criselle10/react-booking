@@ -1,4 +1,4 @@
-export default [
+let coursesData = [
     {
         id: "wdc001",
         name: "PHP-Laravel",
@@ -21,4 +21,6 @@ export default [
         onOffer: true
     },  
 
-]
+];
+
+export default coursesData;

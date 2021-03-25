@@ -1,12 +1,11 @@
 import React from 'react';
-import AppNavBar from '../components/AppNavBar';
 import Banner from '../components/Banner';
 import Highlights from '../components/Highlights';
 
 export default function Home(){
 
 	/*
-		What are props/
+		What are props?
 		--Props are a way to pass data from one component to another.
 		Props stand for properties. They are react objects which is
 		passed like an HTML attribute and is received like function parameter.

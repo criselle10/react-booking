@@ -35,3 +35,25 @@ mounting > displaying elements
 rendering > reading code and logic/applying code
 unmounting > dealing with one page
 
+PROPS(properties) = way of passing data from parent component to child component.
+      = react object that is passed between components.
+      = props are read only, cannot be mutated/change.
+
+Note: 
+    -You can pass multiple props from a parent component to child component.
+    -The reason why we simply don't get the whole prps object in a child component
+    is so that we can choose the props that we need in the component.
+    -You can pass different data types as a prop not just objects.
+
+What allows us to save/track information within a component?
+--->States or sttae variables allow us to save/track information within component.
+Each state is within a component and is independent from other states in other
+component.
+
+How do we create a state?
+--->by using the useState() react hook.
+const [<state variable>,<setter>] = useState(<initial value of the state variable>)
+
+--The useState() react book actually returns 2 things: state variable and the setter function.
+--The useState() react hook returns an array with 2 things, the state varible and the setter
+function for the state variable. Thus, the need for array destructuring.

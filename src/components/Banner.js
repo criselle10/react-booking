@@ -25,5 +25,5 @@ export default function Banner({dataProp}){
 				</Jumbotron>
 			</Col>
 		</Row>
-		)
+	)
 }

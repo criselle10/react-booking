@@ -4,6 +4,18 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
+
+
+
+
+
+
+
+
 /*
 	What is JSX? Javascript + XML
 
@@ -33,13 +45,13 @@ import App from './App';
 //     shootoutChampion: 2
 // }
 
-function greatestShooter(object) {
-    if (object.shootoutChampion === 2) {
-        return <h1>You are one of the best shooters ever.</h1>
-    } else {
-        return <p>You are not one of the best shooters.</p>
-    }
-};
+// function greatestShooter(object) {
+//     if (object.shootoutChampion === 2) {
+//         return <h1>You are one of the best shooters ever.</h1>
+//     } else {
+//         return <p>You are not one of the best shooters.</p>
+//     }
+// };
 // function goatDeterminer(object) {
 //     if (object.MVPs === 5) {
 //         return object.firstName + ' ' + object.lastName
@@ -56,9 +68,3 @@ function greatestShooter(object) {
 // Create a react element without the use of JSX
 
 // let myElement3 = React.createElement('h1', { className: 'greeting' }, 'Hello, was created without JSX')
-
-let myElement4 = <h1 className = "greeting"> hello, I was created using JSX.</h1>
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
