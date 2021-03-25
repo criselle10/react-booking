@@ -57,3 +57,4 @@ const [<state variable>,<setter>] = useState(<initial value of the state variabl
 --The useState() react book actually returns 2 things: state variable and the setter function.
 --The useState() react hook returns an array with 2 things, the state varible and the setter
 function for the state variable. Thus, the need for array destructuring.
+

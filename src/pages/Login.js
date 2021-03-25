@@ -2,13 +2,19 @@ import React,{useState,useEffect} from 'react';
 import {Form,Button} from 'react-bootstrap';
 
 export default function Login(){
+
+     // State hooks to store the values of the input fields
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // State to determine whether submit button is enabled or not
     const [isActive, setIsActive] = useState(false);
 
     function loginUser(e){
+
+        // Prevents page redirection via form submission
         e.preventDefault();
 
+        // Clear input fields after submission
         setEmail('');
         setPassword('');
 
@@ -16,6 +22,7 @@ export default function Login(){
     }
 
     useEffect(() => {
+        // Validation to enable submit button when all fields are populated and both passwords match
         if(email !== '' && password !== ''){
             setIsActive(true)
         }else {

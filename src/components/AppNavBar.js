@@ -1,15 +1,18 @@
 import React from 'react'
 import {Navbar, Nav} from 'react-bootstrap';
+import {Link, NavLink} from 'react-router-dom';
 
 export default function AppNavBar() {
 	return (
 		<Navbar bg="light" expand="lg">
-	        <Navbar.Brand href="#home">Zuitter-Booking</Navbar.Brand>
+	        <Navbar.Brand as={Link} to="/">Zuitter-Booking</Navbar.Brand>
 	        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 	        <Navbar.Collapse id="basic-navbar-nav">
-	            <Nav className="mr-auto">
-	                <Nav.Link href="#home">Home</Nav.Link>
-	                <Nav.Link href="#link">Courses</Nav.Link>
+	            <Nav className="ml-auto">
+	                <Nav.Link as={NavLink} to="/" exact>Home</Nav.Link>
+	                <Nav.Link as={NavLink} to="./courses" exact>Courses</Nav.Link>
+					<Nav.Link as={NavLink} to="./register" exact>Register</Nav.Link>
+					<Nav.Link as={NavLink} to="/login" exact>Log In</Nav.Link>
 	            </Nav>
 	        </Navbar.Collapse>
 	    </Navbar>
