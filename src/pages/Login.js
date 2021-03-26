@@ -1,7 +1,15 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
+// useContext() hook is needed to unwrap your context.
 import {Form,Button} from 'react-bootstrap';
+import Swal from 'sweetalert2';
+import users from '../data/users';
+import UserContext from '../UserContext';
 
 export default function Login(){
+    // useContext will return object which contains the values passed
+    // in the UserProvider
+    const {user, setUser} = useContext(UserContext);
+    console.log(user)
 
      // State hooks to store the values of the input fields
     const [email, setEmail] = useState('');
@@ -10,15 +18,34 @@ export default function Login(){
     const [isActive, setIsActive] = useState(false);
 
     function loginUser(e){
-
-        // Prevents page redirection via form submission
         e.preventDefault();
 
-        // Clear input fields after submission
+        const match = users.find(user => {
+            return(user.email === email && user.password === password)
+        })
+
+        if (match){
+            localStorage.setItem('email', email)
+            localStorage.setItem('isAdmin', match.isAdmin)
+            setUser({
+                email: email,
+                isAdmin: match.isAdmin
+            })
+            Swal.fire({
+                icon: 'success',
+                title: 'Logged In Successfully.',
+                text: 'Thank you for logging in.'
+            })
+        }else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Log In Unuccessfully.',
+                text: 'User credentials are wrong.'
+            })
+        }
+
         setEmail('');
         setPassword('');
-
-        console.log('successfully login')
     }
 
     useEffect(() => {

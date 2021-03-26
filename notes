@@ -58,3 +58,6 @@ const [<state variable>,<setter>] = useState(<initial value of the state variabl
 --The useState() react hook returns an array with 2 things, the state varible and the setter
 function for the state variable. Thus, the need for array destructuring.
 
+======================================================
+React.js was originally designed and conceptualized to create single-page
+application. By default, React.js does not route to other pages.
