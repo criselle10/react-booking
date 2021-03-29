@@ -9,6 +9,7 @@ import Courses from './pages/Courses';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Register from './pages/Register';
+import CreateCourse from './pages/CreateCourse';
 import {UserProvider} from './UserContext';
 import Error from './pages/Error';
 
@@ -45,6 +46,7 @@ export default function App() {
                             <Route exact path="/courses" component={Courses}/>
                             <Route exact path="/login" component={Login}/>
                             <Route exact path="/register" component={Register}/>
+                            <Route exact path="/createcourse" component={CreateCourse}/>
                             <Route exact path="/logout" component={Logout}/>
                             <Route noMatch component={Error}/>
                         </Switch>

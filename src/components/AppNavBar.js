@@ -23,6 +23,11 @@ export default function AppNavBar() {
 							<Nav.Link as={NavLink} to="/login" exact>Log In</Nav.Link>
 						</React.Fragment>
 					}
+					{(user.isAdmin === true) ?
+						<Nav.Link as={NavLink} to='/createcourse' exact>Create Course</Nav.Link>
+						:
+						<Nav.Link></Nav.Link>
+					}
 	            </Nav>
 	        </Navbar.Collapse>
 	    </Navbar>
