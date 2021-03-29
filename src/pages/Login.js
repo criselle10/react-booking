@@ -1,4 +1,5 @@
 import React,{useState,useEffect,useContext} from 'react';
+import {Redirect} from 'react-router-dom';
 // useContext() hook is needed to unwrap your context.
 import {Form,Button} from 'react-bootstrap';
 import Swal from 'sweetalert2';
@@ -15,7 +16,10 @@ export default function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // State to determine whether submit button is enabled or not
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(true);
+
+    // state for redirecting
+    const [willRedirect, setWillRedirect] = useState(false);
 
     function loginUser(e){
         e.preventDefault();
@@ -35,6 +39,8 @@ export default function Login(){
                 icon: 'success',
                 title: 'Logged In Successfully.',
                 text: 'Thank you for logging in.'
+            }).then( result => {
+                setWillRedirect(true)
             })
         }else {
             Swal.fire({
@@ -55,10 +61,12 @@ export default function Login(){
         }else {
             setIsActive(false)
         }
-    }, [email, password])
+    }, [email, password]);
 
     return(
-        <Form onSubmit={(e) => loginUser(e)}>
+        willRedirect?
+        <Redirect to = '/courses' /> :
+         <Form onSubmit={(e) => loginUser(e)}>
             <Form.Group controlId="userEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control 
@@ -89,5 +97,5 @@ export default function Login(){
                 </Button>
             }
         </Form>
-    )
+    )   
 }
