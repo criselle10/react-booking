@@ -39,7 +39,7 @@ export default function CreateCourse(){
             <Form.Group controlid = 'courseId'>
                 <Form.Label>Course ID</Form.Label>
                 <Form.Control 
-                    type = 'courseId'
+                    type = 'text'
                     placeholder = 'Enter course id'
                     value={courseId}
                     onChange={(e) => setCourseId(e.target.value)}
@@ -49,7 +49,7 @@ export default function CreateCourse(){
             <Form.Group controlid = 'courseName'>
                 <Form.Label>Course Name</Form.Label>
                 <Form.Control 
-                    type = 'course'
+                    type = 'text'
                     placeholder = 'Enter new course'
                     value={courseName}
                     onChange={(e) => setCourseName(e.target.value)}
@@ -58,8 +58,8 @@ export default function CreateCourse(){
             </Form.Group>
             <Form.Group controlid = 'courseDescription'>
                 <Form.Label>Description</Form.Label>
-                <Form.Control 
-                    type = 'description'
+                <Form.Control as='textarea' rows='3'
+                    type = 'text'
                     placeholder = 'Enter course description'
                     value= {courseDescription}
                     onChange={(e) => setCourseDescription(e.target.value)}
@@ -69,8 +69,7 @@ export default function CreateCourse(){
             <Form.Group controlid = 'startdate'>
                 <Form.Label>Start Date</Form.Label>
                 <Form.Control 
-                    type = 'startdate'
-                    placeholder = 'Enter start date'
+                    type = 'date'
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
                     required
@@ -79,7 +78,7 @@ export default function CreateCourse(){
             <Form.Group controlid = 'coursePrice'>
                 <Form.Label>Price</Form.Label>
                 <Form.Control 
-                    type = 'price'
+                    type = 'number'
                     placeholder = 'Enter course price'
                     value={coursePrice}
                     onChange={(e) => setCoursePrice(e.target.value)}

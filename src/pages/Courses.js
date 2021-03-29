@@ -53,7 +53,7 @@ export default function Courses(){
 	})
 
 	return(
-		user.isAdmin === true ? 
+		user.isAdmin === true || user.isAdmin === 'true' ? ( 
 		<>
 			<h1>code for admin</h1>
 			<Table>
@@ -72,10 +72,11 @@ export default function Courses(){
 					{coursesRows}
 				</tbody>
 			</Table>
-		</> :
+		</> 
+		):
 		<React.Fragment>
 			<Banner dataProp={data}/>
 			{courses}
 		</React.Fragment>
-	)
+	);
 }
